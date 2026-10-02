@@ -1,5 +1,5 @@
-#include <unistd.h>
 #include <stdio.h>
+#include <unistd.h>
 
 int get_stars(int row)
 {
@@ -185,8 +185,12 @@ int main()
 {
     int N;
     scanf("%d", &N);
+
+    freopen("tree.txt", "w", stdout);
+
     draw_tree(N);
 
+    fclose(stdout);
     fflush(stdout);
 
     sleep(2);
